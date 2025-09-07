@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Whiteboard on Page",
+  "version": "1.0",
+  "description": "Draw, highlight, erase, and switch back to browsing mode on any webpage.",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_icon": {
+      "16": "icons/blackboard.png",
+      "48": "icons/blackboard.png",
+      "128": "icons/blackboard.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/*.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
